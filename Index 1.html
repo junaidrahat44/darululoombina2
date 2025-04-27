@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جامعہ اسلامیہ دارالعلوم بینا</title>
+    <style>
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 1rem;
+            position: relative;
+        }
+        #langBtn {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            color: #004080;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .card {
+            background: white;
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        .card-content {
+            display: none;
+            margin-top: 1rem;
+            text-align: right;
+        }
+        img.qr {
+            width: 200px;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body><header>
+    <button id="langBtn">हिंदी</button>
+    <h1>جامعہ اسلامیہ دارالعلوم بینا</h1>
+</header><div class="card" onclick="toggleContent(this)">
+    تعارف
+    <div class="card-content">
+        <p>یہاں مدرسے کا مکمل تعارف ہوگا۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    دارالعلوم بینا اکابر علماء کرام کے تاثرات
+    <div class="card-content">
+        <p>یہاں تاثرات کا مواد ہوگا۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    شعبہ جات
+    <div class="card-content">
+        <p>مختلف تعلیمی و تربیتی شعبہ جات کی تفصیل۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    داخلہ کی کاروائی
+    <div class="card-content">
+        <p>درخواست فارم، شرائط اور طریقہ کار۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    دارالعلوم بینا کا تعاون
+    <div class="card-content">
+        <p>بینک تفصیلات اور QR کوڈ نیچے دیا گیا ہے:</p>
+        <img src="file-FBoLDvVmeGgkvDEWH35Av4" alt="QR Code" class="qr">
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    مضامین و مقالات
+    <div class="card-content">
+        <p>علمی و تحقیقی مضامین اور مقالات یہاں آئیں گے۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    فضائل و مسائل
+    <div class="card-content">
+        <p>فضائل اور مسائل کے تحت مضامین کی فہرست۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    ہم سے رابطہ کریں
+    <div class="card-content">
+        <p>رابطہ کی تفصیلات اور فارم۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    مولانا زبیر احمد قاسمی ایک نظر میں
+    <div class="card-content">
+        <p>مختصر سوانح حیات۔</p>
+    </div>
+</div><div class="card" onclick="toggleContent(this)">
+    مفتی جنید احمد قاسمی
+    <div class="card-content">
+        <p>مختصر تعارف اور خدمات۔</p>
+    </div>
+</div><script>
+    function toggleContent(card) {
+        const content = card.querySelector('.card-content');
+        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    }
+
+    const translations = {
+        "header": {
+            "urdu": "جامعہ اسلامیہ دارالعلوم بینا",
+            "hindi": "जामिया इस्लामिया दारुलउलूम बीना"
+        },
+        "cards": [
+            {"urdu": "تعارف", "hindi": "परिचय"},
+            {"urdu": "دارالعلوم بینا اکابر علماء کرام کے تاثرات", "hindi": "दारुलउलूम बीना: वरिष्ठ उलेमा की प्रतिक्रियाएं"},
+            {"urdu": "شعبہ جات", "hindi": "विभाग"},
+            {"urdu": "داخلہ کی کاروائی", "hindi": "प्रवेश प्रक्रिया"},
+            {"urdu": "دارالعلوم بینا کا تعاون", "hindi": "दारुलउलूम बीना का सहयोग"},
+            {"urdu": "مضامین و مقالات", "hindi": "लेख और निबंध"},
+            {"urdu": "فضائل و مسائل", "hindi": "फजाइले और मसाइल"},
+            {"urdu": "ہم سے رابطہ کریں", "hindi": "संपर्क करें"},
+            {"urdu": "مولانا زبیر احمد قاسمی ایک نظر میں", "hindi": "मौलाना जुबैर अहमद कासमी एक नजर में"},
+            {"urdu": "مفتی جنید احمد قاسمی", "hindi": "मुफ़्ती जुनैद अहमद कासमी"}
+        ]
+    };
+
+    const langBtn = document.getElementById('langBtn');
+    const header = document.querySelector('header h1');
+    const cards = document.querySelectorAll('.card');
+
+    let currentLang = 'urdu';
+
+    langBtn.addEventListener('click', () => {
+        if(currentLang === 'urdu') {
+            header.textContent = translations.header.hindi;
+            cards.forEach((card, idx) => {
+                card.childNodes[0].nodeValue = translations.cards[idx].hindi;
+            });
+            langBtn.textContent = 'اردو';
+            currentLang = 'hindi';
+        } else {
+            header.textContent = translations.header.urdu;
+            cards.forEach((card, idx) => {
+                card.childNodes[0].nodeValue = translations.cards[idx].urdu;
+            });
+            langBtn.textContent = 'हिंदी';
+            currentLang = 'urdu';
+        }
+    });
+</script></body>
+</html>
